@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useState } from "react";
 import Button from '../Button';
 import Input from '../Input'
@@ -51,9 +52,9 @@ export default function LoginForm() {
 
             <SignUp>
               <span>Não possui conta?&nbsp;</span>
-              <a href="/signUp">
+              <Link href="/signUp">
                   Sign up
-              </a>
+              </Link>
             </SignUp>
           </Access>
 
