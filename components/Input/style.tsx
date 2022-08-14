@@ -48,7 +48,7 @@ export const InputField = styled.input`
     
 `;
 
-export const Eyes =  styled(AiOutlineEye)`
+export const Eyes = styled(AiOutlineEye)`
     height: 25px;
     width: 18.5px;
     color:rgba(102, 112, 133, 1);
@@ -57,11 +57,11 @@ export const Eyes =  styled(AiOutlineEye)`
     top: 19px;
     
     @media (max-width: 500px) {
-        left: 200px;
+        left: 270px;
     }
 `;
 
-export const Eyes2 =  styled(AiOutlineEyeInvisible)`
+export const Eyes2 = styled(AiOutlineEyeInvisible)`
     height: 25px;
     width: 18.5px;
     color:rgba(102, 112, 133, 1);
@@ -72,6 +72,7 @@ export const Eyes2 =  styled(AiOutlineEyeInvisible)`
     @media (max-width: 500px) {
         left: 270px;
     }
+    
 `;
 
 

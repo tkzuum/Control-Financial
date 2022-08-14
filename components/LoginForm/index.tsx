@@ -3,14 +3,16 @@ import { useState } from "react";
 import Button from '../Button';
 import Input from '../Input'
 
+import { signInWithPopup, GoogleAuthProvider, User } from "firebase/auth";
+import { auth } from '../../services/firebase';
+
 import {
   Container,
   WrapInput,
   Access,
   SignUp,
   Google,
-  Eyes,
-  Eyes2
+
 } from './style'
 
 export default function LoginForm() {
@@ -18,6 +20,20 @@ export default function LoginForm() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const [user, setUser] = useState<User>({} as User);
+
+  function signInWithGoogle() {
+    const provider = new GoogleAuthProvider();
+
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        console.log(result.user);
+        setUser(result.user);
+
+      }).catch((error) => {
+        console.log(error);
+      });
+  }
 
 
   return (
@@ -48,7 +64,7 @@ export default function LoginForm() {
 
           <Access>
             <Button backgroundColor={'rgba(33, 119, 121, 1)'} color={'white'}> Login </Button>
-            <Button><Google/>&nbsp;Login with Google</Button>
+            <Button onClick={signInWithGoogle}><Google/>&nbsp;Login with Google</Button>
 
             <SignUp>
               <span>Não possui conta?&nbsp;</span>

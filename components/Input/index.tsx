@@ -1,18 +1,23 @@
-import { useState } from "react";
-import {
+import {  useState, InputHTMLAttributes } from "react";
+import { 
     Container,
     InputField,
     Eyes,
     Eyes2,
     WrapInput 
-
 } from './style'
 
+interface PropsInput extends InputHTMLAttributes<HTMLInputElement>{
+    type: string;
+    name?:string;
+    label?:string;
+    placeholder?:string;
+}
 
-export default function Input({type,name,label,placeholder}) {
+const Input = ({type,name,label,placeholder}: PropsInput) => {
     const [show, setShow] = useState(false);
   
-    function handleClick(e){
+    function handleClick(e: React.MouseEvent){
       e.preventDefault()
         setShow(!show)
     }
@@ -29,9 +34,10 @@ export default function Input({type,name,label,placeholder}) {
                             ): (
                                 " "
                             )
-                        
                     }
                 </WrapInput>
         </Container>
     )
 }
+
+export default Input;

@@ -111,7 +111,6 @@ export const FormLogin =  styled.div`
             line-height: 39px;
             letter-spacing: 0.01em;
             text-align: left;
-
         }
 
         > p{

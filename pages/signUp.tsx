@@ -11,7 +11,6 @@ import {
 
 export default function SignUp() {
   return (
-    
     <>
       <Head>
         <title>Cadastro | TradeNext</title>

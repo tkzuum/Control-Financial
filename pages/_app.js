@@ -9,7 +9,10 @@ function MyApp({ Component, pageProps }) {
             <link rel="shortcut icon" href="/images/logo.ico" />
             <title>TradeNext</title>
         </Head>
-        <Component {...pageProps} />
+  
+         <Component {...pageProps} />  
+        
+        
   </>
 }
 

@@ -11,7 +11,6 @@ import {
 
 export default function Login() {
   return (
-    
     <>
       <Head>
         <title>Login | TradeNext</title>

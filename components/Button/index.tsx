@@ -1,6 +1,11 @@
 import styled from 'styled-components'
 
-const Button = styled.button`
+interface Ibutton{
+    backgroundColor?:string,
+    color?:string
+}
+
+const Button = styled.button<Ibutton>`
     display: flex;
     align-items: center;
     justify-content: center;

@@ -1,6 +1,5 @@
 import styled from 'styled-components'
 import { FcGoogle } from "react-icons/fc";
-import { AiOutlineEyeInvisible , AiOutlineEye} from "react-icons/ai";
 
 export const Container =  styled.div`
     position: relative;
@@ -51,31 +50,6 @@ export const Access =  styled.div`
     }
 `;
 
-export const Eyes =  styled(AiOutlineEye)`
-    height: 25px;
-    width: 18.5px;
-    color:rgba(102, 112, 133, 1);
-    position: absolute;
-    left: 335px;
-    top: 40px;
-    
-    @media (max-width: 500px) {
-        left: 270px;
-    }
-`;
-
-export const Eyes2 =  styled(AiOutlineEyeInvisible)`
-    height: 25px;
-    width: 18.5px;
-    color:rgba(102, 112, 133, 1);
-    position: absolute;
-    left: 335px;
-    top: 40px;
-
-    @media (max-width: 500px) {
-        left: 270px;
-    }
-`;
 
 export const SignUp =  styled.div`
     height: 21px;
@@ -102,6 +76,5 @@ export const SignUp =  styled.div`
         letter-spacing: 0em;
         text-align: center;
     }
-
 `;
 
