@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "controlFinancial",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,16 +9,19 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@types/firebase": "^3.2.1",
+    "@vitejs/plugin-react": "^1.0.1",
     "firebase": "^9.9.1",
     "next": "12.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-icons": "^4.4.0",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.5",
+    "vite": "^3.0.7",
+    "yarn": "^1.22.19"
   },
   "devDependencies": {
     "@types/node": "^18.7.2",
+    "@types/react-dom": "^18.0.6",
     "@types/styled-components": "^5.1.26",
     "@typescript-eslint/eslint-plugin": "^5.33.0",
     "@typescript-eslint/parser": "^5.33.0",
