@@ -113,6 +113,7 @@ export const FormLogin =  styled.div`
             text-align: left;
         }
 
+        
         > p{
             font-family: 'Inter';
             font-size: 14px;

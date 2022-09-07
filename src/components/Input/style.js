@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import { AiOutlineEyeInvisible , AiOutlineEye} from "react-icons/ai";
 
-
 export const Container = styled.div`
     display: flex;
     flex-direction: column;
@@ -39,6 +38,10 @@ export const InputField = styled.input`
             line-height: 24px;
             letter-spacing: 0em;
             text-align: left;
+        }
+
+        &:focus {
+            outline: none;
         }
 
         @media (max-width: 500px) {
@@ -79,4 +82,19 @@ export const Eyes2 = styled(AiOutlineEyeInvisible)`
 export const WrapInput =  styled.div`
     position: relative;
 `;
+
+export const Error = styled.p`
+    position: absolute;
+    color: red;
+    bottom: 5px;
+    left: 5px;
+    font-family: 'Inter';
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0em;
+`
+
+
+
 

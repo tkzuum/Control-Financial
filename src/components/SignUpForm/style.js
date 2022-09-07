@@ -1,11 +1,13 @@
 import styled from 'styled-components'
-import { AiOutlineEyeInvisible , AiOutlineEye} from "react-icons/ai";
-
+import { FcGoogle } from "react-icons/fc";
 
 export const Sign = styled.div`
     Input,label{
         font-size: 16px;
     } 
+    Button{
+        margin-top: 15px;
+    }
 `;
 
 export const Name = styled.div`
@@ -21,16 +23,14 @@ export const Name = styled.div`
         Input{
             width: 125px;
         }
-       
     }
 
 `;
 
+
 export const WrapInput = styled.div`
     display: flex;
     flex-direction: column;
-
-
 
     > Input {
         margin-right: 20px;
@@ -39,18 +39,15 @@ export const WrapInput = styled.div`
     }
 `;
 
-
+export const Google =  styled(FcGoogle)`
+    height: 24px;
+    width:  24px;
+`;
 
 export const Email = styled.div`
-    display: flex;
-    flex-direction: column;
 
-    > Input{
-        margin-top: 10px;
-    }
 `;
 
 export const Password = styled.div`
-
 
 `;

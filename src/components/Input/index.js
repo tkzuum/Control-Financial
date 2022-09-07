@@ -1,32 +1,37 @@
-import {  useState, InputHTMLAttributes } from "react";
+import React, {  useState } from "react";
 import { 
     Container,
     InputField,
     Eyes,
     Eyes2,
-    WrapInput 
+    WrapInput,
+    Error,
 } from './style'
 
-interface PropsInput extends InputHTMLAttributes<HTMLInputElement>{
-    type: string;
-    name?:string;
-    label?:string;
-    placeholder?:string;
-}
 
-const Input = ({type,name,label,placeholder}: PropsInput) => {
+const Input = ({type,name,label,placeholder,onChange,register,error}) => {
     const [show, setShow] = useState(false);
   
-    function handleClick(e: React.MouseEvent){
+    function handleClick(e){
       e.preventDefault()
         setShow(!show)
     }
-
+    
     return (
         <Container>
             <label>{label}</label>
                 <WrapInput >
-                    <InputField type={type == "password" ? (show ? "text" : "password") : type } name={name} placeholder={placeholder}/>
+                    <InputField
+                        type={type == "password" ? (show ? "text" : "password") : type } 
+                        name={name} 
+                        placeholder={placeholder} 
+                        onChange={onChange} 
+                        autoFocus={true}
+                        {...register(`${name}`,{
+                            
+                        })}
+                     />
+                    { error ? <Error> {error} </Error> :""}
                     { 
                         type == 'password' ? (show ? 
                             (<Eyes onClick={handleClick}/> ): 

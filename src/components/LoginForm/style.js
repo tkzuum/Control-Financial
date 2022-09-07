@@ -5,6 +5,7 @@ export const Container =  styled.div`
     position: relative;
     height: 100vh;
     width:  410px;
+    
 `;
 
 export const WrapInput =  styled.div`
@@ -75,6 +76,7 @@ export const SignUp =  styled.div`
         line-height: 20px;
         letter-spacing: 0em;
         text-align: center;
+        
     }
 `;
 
