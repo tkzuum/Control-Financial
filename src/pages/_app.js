@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Reset from "../styles/gereric/reset.js"
+import App from 'next/app'
 
 
 function MyApp({ Component, pageProps }) {
