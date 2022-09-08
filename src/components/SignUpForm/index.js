@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Link from "next/link";
 import { useForm } from "react-hook-form"
 import { yupResolver} from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -14,6 +15,7 @@ import {
     Password,
     WrapInput,
     Google,
+    Login,
 } from './style'
 import Button from '../Button'
 import Input from '../Input'
@@ -127,6 +129,13 @@ export default function SignUpForm(){
             
             <Button type="submit" backgroundColor={'rgba(33, 119, 121, 1)'} color={'white'}>Cadastrar</Button>
             <Button type="button" onClick={signUpWithGoogle}><Google/>&nbsp;Login with Google</Button>
+
+            <Login>
+              <span>Já possui conta?&nbsp;</span>
+              <Link href="/login">
+                  Login
+              </Link>
+            </Login>
         </form>
     </Sign>)
 } 

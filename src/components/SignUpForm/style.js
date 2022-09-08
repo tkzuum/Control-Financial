@@ -44,6 +44,36 @@ export const Google =  styled(FcGoogle)`
     width:  24px;
 `;
 
+export const Login =  styled.div`
+    height: 21px;
+    width: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 15px;
+    
+    font-family: 'Inter';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+
+    > a{
+        text-decoration: none;
+        color: rgba(84, 41, 255, 1);
+
+        font-family: 'Inter';
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: center;
+        
+    }
+`;
+
 export const Email = styled.div`
 
 `;

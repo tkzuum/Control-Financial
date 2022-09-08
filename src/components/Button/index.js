@@ -22,6 +22,7 @@ const Button = styled.button`
         height: 44px;
         width: 310px;
     }
+    
 `
 export default Button;
 

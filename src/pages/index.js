@@ -1,9 +1,8 @@
-import { useState } from "react";
 import Link from 'next/link'
 import Head from 'next/head'
 import Image from 'next/image'
 
-import{
+import {
   Menu,
   Content,
   ImageInvestments,
@@ -22,24 +21,34 @@ export default function Home() {
         <title>TradeNext</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <Logo>
-            <Image
+
+      <Menu>
+        <Logo>
+          <Image
             src="/images/logo.svg"
             alt="logo"
             width="32"
-            height="32"/>
+            height="32" />
 
-            <p>Trade Next</p>
+          <p>Trade Next</p>
         </Logo>
-      <Menu>
-        <Link href="/"><a>Home</a></Link>
-        <Link href="/"><a>Sobre</a></Link>
+        <ul>
+          <li>
+            <Link href="/"><a>Home</a></Link>
+          </li>
+          <li>
+            <Link href="/"><a>Sobre</a></Link>
+          </li>
+          <Links>
+            <li>
+              <Link href="/signUp"><a><Button backgroundColor={'rgba(33, 119, 121, 1)'} color={'white'}>Criar Conta</Button></a></Link>
+            </li>
+            <li>
+              <Link href="/login"><a>Entrar</a></Link>
+            </li>
+          </Links>
+        </ul>
 
-        <Links>
-        <Link href="/signUp"><a><Button backgroundColor={'rgba(33, 119, 121, 1)'} color={'white'}>Criar Conta</Button></a></Link>
-
-          <Link href="/login"><a>Entrar</a></Link>
-        </Links>
       </Menu>
 
       <Content>
@@ -48,7 +57,7 @@ export default function Home() {
             src="/images/investment.svg"
             alt="investment"
             width="718"
-            height="515"/>
+            height="515" />
         </ImageInvestments>
         <ContentStart>
           <h1>Calcule automaticamente a rentabilidade da sua carteira de investimentos</h1>
@@ -56,7 +65,7 @@ export default function Home() {
 
           <Link href="/signUp"><a><Button backgroundColor={'rgba(33, 119, 121, 1)'} color={'white'}>Crie sua conta</Button></a></Link>
         </ContentStart>
-        
+
       </Content>
 
     </div>
