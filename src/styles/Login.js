@@ -1,11 +1,7 @@
 import styled from 'styled-components'
 
-export const BodyLogin =  styled.div`
-    @media (max-width: 867px) {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+export const Body = styled.div`
+
 `;
 
 export const SideImage =  styled.div`
@@ -36,16 +32,17 @@ export const Logo =  styled.div`
     flex-direction: column;
     align-items: center;
     position: absolute;
-    top: 70px;
+    top: -80px;
 
     @media (min-width: 867px) {
-        position: absolute;
-        left: 56%;
-        top: 80px;
+        position: relative;
+        top: -50px;
+        
         width: 130px;
         height: 30px;
         display: flex;
         flex-direction: row;
+        
 
         >p{
             position: absolute;
@@ -54,6 +51,12 @@ export const Logo =  styled.div`
             left: 44px;
             top: 6.5px;
         }
+    }
+
+    @media (max-width: 500px) {
+        position: relative;
+        left: 30%;
+        top: -35px;
     }
 
     > p{            
@@ -72,9 +75,10 @@ export const Logo =  styled.div`
 export const FormLogin =  styled.div`
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    position: absolute;
-    top: 200px;
+    align-items: center;
+    position: relative;
+    top: 150px;
+
     
     > h1{
         font-family: 'Inter';
@@ -97,13 +101,23 @@ export const FormLogin =  styled.div`
     @media (min-width: 867px) {
         position: absolute;
         left: 56%;
-        top: 150px;
+        top: 140px;
+
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
     }
 
     @media (max-width: 500px) {
-        height: 71px;
-        width: 298px;
+        position: absolute;
+        left: 16%;
+        top: 100px;
 
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        
+        
         > h1{
             font-family: 'Inter';
             font-size: 32px;
@@ -124,6 +138,8 @@ export const FormLogin =  styled.div`
 
         }
     }
+
+
 `;
 
 

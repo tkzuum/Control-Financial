@@ -90,7 +90,7 @@ export default function LoginForm() {
 
           <Access>
             <Button type="submit" backgroundColor={'rgba(33, 119, 121, 1)'} color={'white'}> Login </Button>
-            <Button type="button" onClick={loginInWithGoogle}><Google/>&nbsp;Login with Google</Button>
+            <Button type="button" onClick={loginInWithGoogle}><Google/>&nbsp;Login com Google</Button>
 
             <SignUp>
               <span>Não possui conta?&nbsp;</span>

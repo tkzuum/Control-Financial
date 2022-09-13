@@ -128,7 +128,7 @@ export default function SignUpForm(){
             </Password>
             
             <Button type="submit" backgroundColor={'rgba(33, 119, 121, 1)'} color={'white'}>Cadastrar</Button>
-            <Button type="button" onClick={signUpWithGoogle}><Google/>&nbsp;Login with Google</Button>
+            <Button type="button" onClick={signUpWithGoogle}><Google/>&nbsp;Login com Google</Button>
 
             <Login>
               <span>Já possui conta?&nbsp;</span>
