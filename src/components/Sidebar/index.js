@@ -1,54 +1,85 @@
-import { GrAnalytics } from "react-icons/gr";
-import { AiOutlineHome } from "react-icons/ai";
-import { FaGlobeAmericas ,FaBars} from "react-icons/fa";
-import { BsChatDots } from "react-icons/bs";
+import { useState } from "react";
 import Link from "next/link";
+import Image from 'next/image'
 
 import {
     Container,
     Sidebar,
     Top_section,
     Icon,
-    Link_text
-}from './style'
+    Link_text,
+    IconFaGlobeAmericas, 
+    IconBsChatDots,
+    IconAiOutlineHome,
+    IconGrAnalytics,
+    Logo,
+    IconBsArrowLeftShort,
+    IconMdOutlineSpaceDashboard,
+    IconBiLogOut
+
+} from './style'
 
 
-export default function SideBar(){
-    const[isOpen ,setIsOpen] = useState(false);
-    const toggle = () => setIsOpen (!isOpen);
+export default function SideBar() {
+    const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <Container>
-            <Sidebar style={{width: isOpen ? "200px" : "50px"}} >
-                <Top_section>
-                    <h1 style={{display: isOpen ? "block" : "none"}} className="logo">Logo</h1>
-                    <div style={{marginLeft: isOpen ? "50px" : "0px"}} className="bars">
-                        <FaBars onClick={toggle}/>
-                    </div>
+        <Container  >
+            <Sidebar style={{ width: isOpen ? "200px" : "88px" }} onMouseEnter={() => setIsOpen(true)} >
+                <Top_section >
+                    <Logo>
+                        <Image
+                            src="/images/logo.svg"
+                            alt="logo"
+                            width="36"
+                            height="36" 
+                        />
+                        <p style={{ display: isOpen ? "block" : "none" }}>Trade Next</p>
+                    </Logo>
+                 <IconBsArrowLeftShort style={{ display: isOpen ? "block" : "none" }} onClick={() => setIsOpen(false)}/>
+
                 </Top_section>
 
-                <Link activeclassName="active">
-                    <Icon>{<AiOutlineHome/>}</Icon>
-                    <Link_text style={{display: isOpen ? "block" : "none"}}>Home</Link_text>
-                </Link>
-                
-                <Link activeclassName="active">
-                    <Icon>{<GrAnalytics/>}</Icon>
-                    <Link_text style={{display: isOpen ? "block" : "none"}}>Dashboard</Link_text>
-                </Link>
-                
-                <Link activeclassName="active">
-                    <Icon>{<FaGlobeAmericas/>}</Icon>
-                    <Link_text style={{display: isOpen ? "block" : "none"}}>Noticias</Link_text>
-                </Link>
-                
-                <Link activeclassName="active">
-                    <Icon>{<BsChatDots/>}</Icon>
-                    <Link_text style={{display: isOpen ? "block" : "none"}}>Chat</Link_text>
-                </Link>
+                <ul>    
+                    <Link activeclassName="active" href="/dashboard">
+                        <Link_text >
+                            <Icon>{<IconAiOutlineHome/>}</Icon>
+                            <title style={{ display: isOpen ? "block" : "none" }}>Home</title>
+                        </Link_text>
+                    </Link>
 
+                    <Link activeclassName="active" href="/dashboard">
+                        <Link_text>
+                            <Icon ><IconMdOutlineSpaceDashboard/></Icon>
+                            <title style={{ display: isOpen ? "block" : "none" }}>Dashboard</title>
+                        </Link_text>
+                    </Link>
+
+                    <Link activeclassName="active" href="/dashboard">
+                        <Link_text>
+                            <Icon >{<IconGrAnalytics />}</Icon>
+                            <title style={{ display: isOpen ? "block" : "none" }}>Analytics</title>
+                        </Link_text>
+                    </Link>
+
+                    <Link activeclassName="active" href="/dashboard">
+                        <Link_text >
+                            <Icon >{<IconFaGlobeAmericas />}</Icon>
+                            <title style={{ display: isOpen ? "block" : "none" }}>Noticias</title> 
+                        </Link_text>
+                    </Link>
+
+                    <Link activeclassName="active" href="/dashboard">
+                        <Link_text>
+                            <Icon >{<IconBsChatDots />}</Icon>
+                            <title style={{ display: isOpen ? "block" : "none" }}>Chat</title>
+                        </Link_text>
+                    </Link>
+                </ul>
+
+                <IconBiLogOut style={{ left: isOpen ? "155px" : "28px" }}/>
             </Sidebar>
         </Container>
     );
-    
+
 }

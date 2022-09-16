@@ -24,7 +24,7 @@
     "rn-nodeify": "^10.3.0",
     "styled-components": "^5.3.5",
     "vite": "^3.0.7",
-    "webpack": "^5.74.0",
+    "webpack": "^5.69.0",
     "yarn": "^1.22.19",
     "yup": "^0.32.11"
   },
