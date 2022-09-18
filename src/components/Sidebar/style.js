@@ -49,7 +49,7 @@ export const IconBsArrowLeftShort = styled(BsArrowLeftShort)`
     top: 15px;
     color:#53545C;
 
-    @media (max-width: 375px){
+    @media (max-width: 414px){
         display: none;
     }
 
@@ -67,7 +67,7 @@ export const Logo = styled.div`
     
 
     p{
-        @media (max-width: 375px){
+        @media (max-width: 414px){
             display: none;
         }
         display:${props => props.active ? "block" : "none"};
@@ -97,7 +97,7 @@ export const Sidebar = styled.div`
     position: relative;
     left: 2px;
 
-    @media (max-width: 375px){
+    @media (max-width: 414px){
         width: 88px;
     }
 
@@ -109,7 +109,7 @@ export const Sidebar = styled.div`
         left: 65px;
         display:${props => props.active ? "block" : "none"};
 
-        @media (max-width: 375px){
+        @media (max-width: 414px){
             display: none;
         }
 
@@ -219,7 +219,7 @@ export const Name = styled.div`
     }
 
 
-    @media (max-width: 375px){
+    @media (max-width: 414px){
         display: none;
     }
 
