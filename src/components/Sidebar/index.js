@@ -15,26 +15,38 @@ import {
     Logo,
     IconBsArrowLeftShort,
     IconMdOutlineSpaceDashboard,
-    IconBiLogOut
+    IconHiOutlineLogout,
+    Menu,
+    Name,
+    User
 
 } from './style'
+import Search from "../Search";
 
 
-export default function SideBar() {
+export default function SideBar({Page}) {
     const [isOpen, setIsOpen] = useState(false);
 
     return (
         <Container  >
-            <Sidebar style={{ width: isOpen ? "200px" : "88px" }} onMouseEnter={() => setIsOpen(true)} >
+
+            <Sidebar style={{ width: isOpen ? "200px" : "88px" }} >
+                <Menu >
+                    <Search></Search>
+
+                    <Name active={isOpen}>{Page}</Name>
+
+                    <User>Name user</User>
+                </Menu>
                 <Top_section >
-                    <Logo>
+                    <Logo active={isOpen}>
                         <Image
                             src="/images/logo.svg"
                             alt="logo"
                             width="36"
                             height="36" 
                         />
-                        <p style={{ display: isOpen ? "block" : "none" }}>Trade Next</p>
+                        <p >Trade Next</p>
                     </Logo>
                  <IconBsArrowLeftShort style={{ display: isOpen ? "block" : "none" }} onClick={() => setIsOpen(false)}/>
 
@@ -42,43 +54,46 @@ export default function SideBar() {
 
                 <ul>    
                     <Link activeclassName="active" href="/dashboard">
-                        <Link_text >
+                        <Link_text onClick={() => setIsOpen(true)} active={isOpen}>
                             <Icon>{<IconAiOutlineHome/>}</Icon>
-                            <title style={{ display: isOpen ? "block" : "none" }}>Home</title>
+                            <title>Home</title>
                         </Link_text>
                     </Link>
 
                     <Link activeclassName="active" href="/dashboard">
-                        <Link_text>
+                        <Link_text onClick={() => setIsOpen(true)} active={isOpen}>
                             <Icon ><IconMdOutlineSpaceDashboard/></Icon>
-                            <title style={{ display: isOpen ? "block" : "none" }}>Dashboard</title>
+                            <title>Dashboard</title>
                         </Link_text>
                     </Link>
 
                     <Link activeclassName="active" href="/dashboard">
-                        <Link_text>
+                        <Link_text onClick={() => setIsOpen(true)} active={isOpen}>
                             <Icon >{<IconGrAnalytics />}</Icon>
-                            <title style={{ display: isOpen ? "block" : "none" }}>Analytics</title>
+                            <title>Analytics</title>
                         </Link_text>
                     </Link>
 
                     <Link activeclassName="active" href="/dashboard">
-                        <Link_text >
+                        <Link_text onClick={() => setIsOpen(true)} active={isOpen}>
                             <Icon >{<IconFaGlobeAmericas />}</Icon>
-                            <title style={{ display: isOpen ? "block" : "none" }}>Noticias</title> 
+                            <title>Noticias</title> 
                         </Link_text>
                     </Link>
 
                     <Link activeclassName="active" href="/dashboard">
-                        <Link_text>
+                        <Link_text onClick={() => setIsOpen(true)} active={isOpen}>
                             <Icon >{<IconBsChatDots />}</Icon>
-                            <title style={{ display: isOpen ? "block" : "none" }}>Chat</title>
+                            <title>Chat</title>
                         </Link_text>
                     </Link>
                 </ul>
 
-                <IconBiLogOut style={{ left: isOpen ? "155px" : "28px" }}/>
+                <IconHiOutlineLogout />
+                <p style={{ display: isOpen ? "block" : "none" }}>Logout</p>
             </Sidebar>
+
+            
         </Container>
     );
 

@@ -8,7 +8,7 @@ import {
 export default function Dashboard(){
     return(
         <Body>
-            <Sidebar/>
+            <Sidebar Page={'Dashboard'}/>
         </Body>
     )
 }
