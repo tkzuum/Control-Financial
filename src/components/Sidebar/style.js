@@ -7,12 +7,9 @@ import { MdOutlineSpaceDashboard } from "react-icons/md";
 import { HiOutlineLogout } from "react-icons/hi";
 
 
-
-
 export const IconMdOutlineSpaceDashboard = styled(MdOutlineSpaceDashboard)`
     height: 24px;
     width: 24px;
-    cursor: pointer;
 `;
 
 export const IconGrAnalytics = styled(GrAnalytics)`
@@ -23,8 +20,8 @@ export const IconGrAnalytics = styled(GrAnalytics)`
 export const IconHiOutlineLogout = styled(HiOutlineLogout)`
     height: 24px;
     width: 24px;
-    position: relative;
-    top: 530px;
+    position: fixed;
+    bottom: 4%;
     left: 28px;
     
 `;
@@ -44,6 +41,21 @@ export const IconBsChatDots = styled(BsChatDots)`
     width: 24px;
 `;
 
+export const IconBsArrowLeftShort = styled(BsArrowLeftShort)`
+    height: 24px;
+    width: 24px;
+    position: relative;
+    left: 30px;
+    top: 15px;
+    color:#53545C;
+
+    @media (max-width: 360px){
+        display: none;
+    }
+
+    display:${props => props.active ? "block" : "none"};
+`;
+
 export const Logo = styled.div`
     position: relative;
     top: 15px;
@@ -55,7 +67,10 @@ export const Logo = styled.div`
     
 
     p{
-        display:${ props => props.active ? "block" : "none" };
+        @media (max-width: 360px){
+            display: none;
+        }
+        display:${props => props.active ? "block" : "none"};
         margin-left: 10px;
         font-family: 'Inter';
         font-size: 16px;
@@ -65,15 +80,6 @@ export const Logo = styled.div`
         text-align: left;
     }
 
-`;
-
-export const IconBsArrowLeftShort= styled(BsArrowLeftShort)`
-    height: 24px;
-    width: 24px;
-    position: relative;
-    left: 30px;
-    top: 15px;
-    color:#53545C;
 `;
 
 
@@ -91,10 +97,21 @@ export const Sidebar = styled.div`
     position: relative;
     left: 2px;
 
+    @media (max-width: 360px){
+        width: 88px;
+    }
+
+    width:${props => props.active ? "200px" : "88px"};
+
     > p{
-        position: relative;
-        top: 508px;
+        position: fixed;
+        bottom: 4%;
         left: 65px;
+        display:${props => props.active ? "block" : "none"};
+
+        @media (max-width: 360px){
+            display: none;
+        }
 
         margin-left: 10px;
         font-family: 'Inter';
@@ -119,7 +136,7 @@ export const Icon = styled.div`
     width: 56px;
     display: flex;
     align-items: center;
-    color: #53545C;
+    
 `
 
 export const Link_text = styled.li`
@@ -135,7 +152,11 @@ export const Link_text = styled.li`
     
     title{
         margin-left: -20px;
-        display:${ props => props.active ? "block" : "none" };
+        display:${props => props.active ? "block" : "none"};
+
+        @media (max-width: 360px){
+            display: none;
+        }
 
         font-family: 'Inter';
         font-size: 14px;
@@ -150,7 +171,12 @@ export const Link_text = styled.li`
         title{
             font-size: 14.5px;
         }
-        width:${ props => props.active ? "150px" : "36px" };
+
+        @media (max-width: 360px){
+            width:36px;
+        }
+
+        width:${props => props.active ? "150px" : "36px"};
         background-color: rgba(145, 228, 137, 0.5);
         border-radius: 12px;
     }
@@ -170,13 +196,14 @@ export const Menu = styled.div`
 
 export const User = styled.div`
     position: absolute;
-    right: 3%;
+    right: 5%;
     top:35px;
+
 `
 
 export const Name = styled.div`
     position: absolute;
-    left:${ props => props.active ? "220px" : "100px" };
+    left:${props => props.active ? "220px" : "100px"};
     top:40px;
 
     margin-left: 10px;
@@ -186,5 +213,14 @@ export const Name = styled.div`
     line-height: 19px;
     letter-spacing: 0.01em;
     text-align: left;
+
+    @media (max-width: 750px) {
+        display:${props => props.active ? "none" : "block"};
+    }
+
+
+    @media (max-width: 360px){
+        display: none;
+    }
 
 `

@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
 export const SearchBox = styled.div`
-    position:absolute;
+    position:relative;
     height: 25px;
     width: 25%;
-    top:20px;
+    top:-15px;
     left: 60%;
     padding: 10px;
     border-radius: 10px;
@@ -14,9 +14,14 @@ export const SearchBox = styled.div`
     align-items: center;
     transition: .8s;
 
-    @media (max-width: 820px) {
-        left: 50%;
+    @media (max-width: 1200px) {
+        left: 47%;
     }
+
+    @media (max-width: 360px){
+        left: 30%;
+    }
+
     > Link{
         width: 20px;
         height: 40px;

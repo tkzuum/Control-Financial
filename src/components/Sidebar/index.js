@@ -30,11 +30,11 @@ export default function SideBar({Page}) {
     return (
         <Container  >
 
-            <Sidebar style={{ width: isOpen ? "200px" : "88px" }} >
+            <Sidebar active={isOpen} >
                 <Menu >
                     <Search></Search>
 
-                    <Name active={isOpen}>{Page}</Name>
+                    <Name active={isOpen} >{Page}</Name>
 
                     <User>Name user</User>
                 </Menu>
@@ -48,14 +48,14 @@ export default function SideBar({Page}) {
                         />
                         <p >Trade Next</p>
                     </Logo>
-                 <IconBsArrowLeftShort style={{ display: isOpen ? "block" : "none" }} onClick={() => setIsOpen(false)}/>
+                 <IconBsArrowLeftShort active={isOpen} onClick={() => setIsOpen(false)}/>
 
                 </Top_section>
 
                 <ul>    
                     <Link activeclassName="active" href="/dashboard">
                         <Link_text onClick={() => setIsOpen(true)} active={isOpen}>
-                            <Icon>{<IconAiOutlineHome/>}</Icon>
+                            <Icon><IconAiOutlineHome/></Icon>
                             <title>Home</title>
                         </Link_text>
                     </Link>
@@ -69,28 +69,28 @@ export default function SideBar({Page}) {
 
                     <Link activeclassName="active" href="/dashboard">
                         <Link_text onClick={() => setIsOpen(true)} active={isOpen}>
-                            <Icon >{<IconGrAnalytics />}</Icon>
+                            <Icon ><IconGrAnalytics /></Icon>
                             <title>Analytics</title>
                         </Link_text>
                     </Link>
 
                     <Link activeclassName="active" href="/dashboard">
                         <Link_text onClick={() => setIsOpen(true)} active={isOpen}>
-                            <Icon >{<IconFaGlobeAmericas />}</Icon>
+                            <Icon ><IconFaGlobeAmericas /></Icon>
                             <title>Noticias</title> 
                         </Link_text>
                     </Link>
 
                     <Link activeclassName="active" href="/dashboard">
                         <Link_text onClick={() => setIsOpen(true)} active={isOpen}>
-                            <Icon >{<IconBsChatDots />}</Icon>
+                            <Icon ><IconBsChatDots /></Icon>
                             <title>Chat</title>
                         </Link_text>
                     </Link>
                 </ul>
 
                 <IconHiOutlineLogout />
-                <p style={{ display: isOpen ? "block" : "none" }}>Logout</p>
+                <p active={isOpen} >Logout</p>
             </Sidebar>
 
             
