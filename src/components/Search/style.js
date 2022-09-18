@@ -18,7 +18,7 @@ export const SearchBox = styled.div`
         left: 47%;
     }
 
-    @media (max-width: 360px){
+    @media (max-width: 375px){
         left: 30%;
     }
 
