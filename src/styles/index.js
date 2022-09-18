@@ -34,8 +34,12 @@ export const Menu = styled.div`
         justify-content: center;
         position: relative;
         left: 0px;
+    }
 
-        
+    @media (max-width:600px) {
+       > li{
+        display: none;
+       }
     }
     
 }
@@ -81,6 +85,18 @@ export const Links = styled.div`
         align-items: center;
     }
 
+    @media (max-width:600px) {
+        position: relative;
+        left: 95px;
+       
+    }
+
+    @media (min-width: 360px) {
+        top: -5px;
+        left: 15px;
+    }
+
+
 `;
 
 export const Logo = styled.div`
@@ -125,6 +141,18 @@ export const Logo = styled.div`
         letter-spacing: 0.01em;
         text-align: left;
     }
+
+    @media (min-width: 360px) {
+        flex-direction: column;
+        top: 20px;
+        left: -10px;
+
+        >p{
+            position: absolute;
+            top: 35px;
+            left: 25px;
+        }
+    }
 `;
 
 export const Content = styled.div`
@@ -147,7 +175,7 @@ export const ImageInvestments = styled.div`
     height: 35vh;
     width: 45%;
     max-width: 600px;
-    min-width: 450px;
+    min-width: 300px;
     
     top: 80px;
     border-radius: 20px;
@@ -221,6 +249,14 @@ export const ContentStart = styled.div`
             top: 70px;
         }
         
+    }
+
+    @media (min-width: 360px) {
+        
+        >h1 ,p{
+            position:relative;
+            left: -35px;
+        }
     }
 
 `;
