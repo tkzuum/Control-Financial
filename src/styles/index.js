@@ -1,6 +1,8 @@
 import styled from 'styled-components'
 
 export const Menu = styled.div`
+    display: flex;
+    justify-content: center;
     >ul{
         width: 100vw;
         display: flex;
@@ -8,7 +10,7 @@ export const Menu = styled.div`
         align-items: center;
         position: relative;
         top: 35px;
-        left: 30%;
+        left: 20%;
 
         > li{
             > a {
@@ -36,7 +38,7 @@ export const Menu = styled.div`
         left: 0px;
     }
 
-    @media (max-width:600px) {
+    @media (max-width:650px) {
        > li{
         display: none;
        }
@@ -50,6 +52,9 @@ export const Links = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
+    position: relative;
+    left: -40px;
     top: 0px;
 
     
@@ -78,26 +83,13 @@ export const Links = styled.div`
     Button:hover{
         background-color: #119598;
     }
-    
 
-    @media (min-width: 500px) {
-        position: relative;
-        left: 10%;
-        top: 0px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
+    @media (min-width: 590px) {
+        left: 65px;
     }
 
-    @media (max-width:600px) {
-        position: relative;
-        left: 95px;
-        
-       
-    }
 
-    @media (min-width: 360px) {
-        position: relative;
+    @media (min-width: 650px) {
         left: 15px;
     }
 
@@ -110,8 +102,8 @@ export const Logo = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
-    left: -5px;
+    position: relative;
+    left: 12px;
     top: 30px;
     width: 130px;
     height: 30px;
@@ -120,7 +112,7 @@ export const Logo = styled.div`
         height: 19px;
         width: 86px;
         position: absolute;
-        left: 25px;
+        left: 7px;
         top: 35px;
 
         font-family: 'Inter';
@@ -130,8 +122,8 @@ export const Logo = styled.div`
         text-align: left;
     }
 
-    @media (min-width: 800px) {
-        position: absolute;
+    @media (min-width: 650px) {
+        position: relative;
         left: 5%;
         top: 41px;
         width: 130px;
