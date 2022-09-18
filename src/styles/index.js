@@ -92,7 +92,7 @@ export const Links = styled.div`
     }
 
     @media (min-width: 360px) {
-        top: -5px;
+        top: 10px;
         left: 15px;
     }
 
@@ -101,13 +101,27 @@ export const Links = styled.div`
 
 export const Logo = styled.div`
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     position: absolute;
-    left: 5%;
-    top: 41px;
+    left: -5px;
+    top: 35px;
     width: 130px;
     height: 30px;
+
+    > p{            
+        height: 19px;
+        width: 86px;
+        position: absolute;
+        left: 25px;
+        top: 35px;
+
+        font-family: 'Inter';
+        font-weight: 500;
+        line-height: 19px;
+        letter-spacing: 0.01em;
+        text-align: left;
+    }
 
     @media (min-width: 800px) {
         position: absolute;
@@ -118,7 +132,7 @@ export const Logo = styled.div`
         display: flex;
         flex-direction: row;
 
-        >p{
+        > p{
             position: absolute;
             font-family: 'Inter';
             height: 19px;
@@ -128,31 +142,8 @@ export const Logo = styled.div`
         }
     }
 
-    > p{            
-        height: 19px;
-        width: 86px;
-        position: absolute;
-        left: 44px;
-        top: 6.5px;
+ 
 
-        font-family: 'Inter';
-        font-weight: 500;
-        line-height: 19px;
-        letter-spacing: 0.01em;
-        text-align: left;
-    }
-
-    @media (min-width: 360px) {
-        flex-direction: column;
-        top: 20px;
-        left: -10px;
-
-        >p{
-            position: absolute;
-            top: 35px;
-            left: 25px;
-        }
-    }
 `;
 
 export const Content = styled.div`
