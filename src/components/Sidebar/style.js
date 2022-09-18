@@ -49,7 +49,7 @@ export const IconBsArrowLeftShort = styled(BsArrowLeftShort)`
     top: 15px;
     color:#53545C;
 
-    @media (max-width: 360px){
+    @media (max-width: 375px){
         display: none;
     }
 
@@ -67,7 +67,7 @@ export const Logo = styled.div`
     
 
     p{
-        @media (max-width: 360px){
+        @media (max-width: 375px){
             display: none;
         }
         display:${props => props.active ? "block" : "none"};
@@ -97,7 +97,7 @@ export const Sidebar = styled.div`
     position: relative;
     left: 2px;
 
-    @media (max-width: 360px){
+    @media (max-width: 375px){
         width: 88px;
     }
 
@@ -109,7 +109,7 @@ export const Sidebar = styled.div`
         left: 65px;
         display:${props => props.active ? "block" : "none"};
 
-        @media (max-width: 360px){
+        @media (max-width: 375px){
             display: none;
         }
 
@@ -154,7 +154,7 @@ export const Link_text = styled.li`
         margin-left: -20px;
         display:${props => props.active ? "block" : "none"};
 
-        @media (max-width: 360px){
+        @media (max-width: 375px){
             display: none;
         }
 
@@ -172,7 +172,7 @@ export const Link_text = styled.li`
             font-size: 14.5px;
         }
 
-        @media (max-width: 360px){
+        @media (max-width: 375px){
             width:36px;
         }
 
