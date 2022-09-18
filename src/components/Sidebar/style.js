@@ -219,7 +219,7 @@ export const Name = styled.div`
     }
 
 
-    @media (max-width: 360px){
+    @media (max-width: 375px){
         display: none;
     }
 
