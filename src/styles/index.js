@@ -50,6 +50,8 @@ export const Links = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
+    top: 0px;
+
     
 
     > li{
@@ -76,10 +78,12 @@ export const Links = styled.div`
     Button:hover{
         background-color: #119598;
     }
+    
 
-    @media (min-width: 950px) {
+    @media (min-width: 500px) {
         position: relative;
         left: 10%;
+        top: 0px;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -88,13 +92,16 @@ export const Links = styled.div`
     @media (max-width:600px) {
         position: relative;
         left: 95px;
+        
        
     }
 
     @media (min-width: 360px) {
-        top: 10px;
+        position: relative;
         left: 15px;
     }
+
+
 
 
 `;
@@ -105,7 +112,7 @@ export const Logo = styled.div`
     align-items: center;
     position: absolute;
     left: -5px;
-    top: 35px;
+    top: 30px;
     width: 130px;
     height: 30px;
 
