@@ -8,7 +8,7 @@ import {
     Top_section,
     Icon,
     Link_text,
-    IconFaGlobeAmericas, 
+    IconFaGlobeAmericas,
     IconBsChatDots,
     IconAiOutlineHome,
     IconGrAnalytics,
@@ -24,8 +24,9 @@ import {
 import Search from "../Search";
 
 
-export default function SideBar({Page}) {
+export default function SideBar({ Page }) {
     const [isOpen, setIsOpen] = useState(false);
+
 
     return (
         <Container  >
@@ -44,56 +45,66 @@ export default function SideBar({Page}) {
                             src="/images/logo.svg"
                             alt="logo"
                             width="36"
-                            height="36" 
+                            height="36"
                         />
                         <p >Trade Next</p>
                     </Logo>
-                 <IconBsArrowLeftShort active={isOpen} onClick={() => setIsOpen(false)}/>
+                    <IconBsArrowLeftShort active={isOpen} onClick={() => setIsOpen(false)} />
 
                 </Top_section>
 
-                <ul>    
-                    <Link activeclassName="active" href="/dashboard">
-                        <Link_text onClick={() => setIsOpen(true)} active={isOpen}>
-                            <Icon><IconAiOutlineHome/></Icon>
+                <ul>
+
+                    <Link_text onClick={() => setIsOpen(true)} active={isOpen}>
+                        <Icon><IconAiOutlineHome /></Icon>
+                        <Link activeclassName="active" href="/home">
                             <title>Home</title>
-                        </Link_text>
-                    </Link>
+                        </Link>
+                    </Link_text>
 
-                    <Link activeclassName="active" href="/dashboard">
-                        <Link_text onClick={() => setIsOpen(true)} active={isOpen}>
-                            <Icon ><IconMdOutlineSpaceDashboard/></Icon>
+
+
+                    <Link_text onClick={() => setIsOpen(true)} active={isOpen}>
+                        <Icon ><IconMdOutlineSpaceDashboard /></Icon>
+                        <Link activeclassName="active" href="/dashboard">
                             <title>Dashboard</title>
-                        </Link_text>
-                    </Link>
+                        </Link>
+                    </Link_text>
 
-                    <Link activeclassName="active" href="/dashboard">
-                        <Link_text onClick={() => setIsOpen(true)} active={isOpen}>
-                            <Icon ><IconGrAnalytics /></Icon>
+
+
+                    <Link_text onClick={() => setIsOpen(true)} active={isOpen}>
+                        <Icon ><IconGrAnalytics /></Icon>
+                        <Link activeclassName="active" href="/analytics">
                             <title>Analytics</title>
-                        </Link_text>
-                    </Link>
+                        </Link>
+                    </Link_text>
 
-                    <Link activeclassName="active" href="/dashboard">
-                        <Link_text onClick={() => setIsOpen(true)} active={isOpen}>
-                            <Icon ><IconFaGlobeAmericas /></Icon>
-                            <title>Noticias</title> 
-                        </Link_text>
-                    </Link>
 
-                    <Link activeclassName="active" href="/dashboard">
-                        <Link_text onClick={() => setIsOpen(true)} active={isOpen}>
-                            <Icon ><IconBsChatDots /></Icon>
+
+                    <Link_text onClick={() => setIsOpen(true)} active={isOpen}>
+                        <Icon ><IconFaGlobeAmericas /></Icon>
+                        <Link activeclassName="active" href="/news">
+                            <title>Noticias</title>
+                        </Link>
+                    </Link_text>
+
+
+
+                    <Link_text onClick={() => setIsOpen(true)} active={isOpen}>
+                        <Icon ><IconBsChatDots /></Icon>
+                        <Link activeclassName="active" href="/dashboard">
                             <title>Chat</title>
-                        </Link_text>
-                    </Link>
+                        </Link>
+                    </Link_text>
+
                 </ul>
 
                 <IconHiOutlineLogout />
                 <p active={isOpen} >Logout</p>
             </Sidebar>
 
-            
+
         </Container>
     );
 

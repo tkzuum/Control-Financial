@@ -27,9 +27,9 @@ const Input = ({type,name,label,placeholder,onChange,register,error}) => {
                         placeholder={placeholder} 
                         onChange={onChange} 
                         autoFocus={true}
-                        {...register(`${name}`,{
+                      /*   {...register(`${name}`,{
                             
-                        })}
+                        })} */
                      />
                     { error ? <Error> {error} </Error> :""}
                     { 

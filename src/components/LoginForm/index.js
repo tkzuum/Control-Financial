@@ -19,6 +19,7 @@ import {
 
 } from './style'
 
+
 export default function LoginForm() {
 
   const schema =  yup.object().shape({
@@ -31,6 +32,8 @@ export default function LoginForm() {
   const { register , handleSubmit: onSubmit , formState:{errors} } = useForm({
     resolver:yupResolver(schema),
   });
+
+  
 
   const [user, setUser] = useState({});
 
@@ -49,7 +52,8 @@ export default function LoginForm() {
 
   const handleSubmit = async (data) =>{
     const auth = getAuth();
-    await signInWithEmailAndPassword(auth ,data.email, data.password).then(singedUser => {
+    await signInWithEmailAndPassword(auth ,data.email, data.password).then( async singedUser => {
+
       console.log(singedUser)
       console.log("logado com sucesso")
     }).catch((error)=>{
